@@ -22,8 +22,13 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
-  <<: *default
-  database: horror_movies_backend_development
+  adapter: postgresql
+  encoding: unicode
+  database: horror_dev
+  host: localhost
+  pool: 5
+  username: railsuser
+  password: <%= ENV['HORROR_DEV_PASSWORD'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -81,6 +86,10 @@ test:
 #
 production:
   <<: *default
-  database: horror_movies_backend_production
-  username: horror_movies_backend
-  password: <%= ENV['HORROR_MOVIES_BACKEND_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  database: horror_prod
+  host: localhost
+  pool: 5
+  username: railsuser
+  password: <%= ENV['HORROR_PROD_PASSWORD'] %>
