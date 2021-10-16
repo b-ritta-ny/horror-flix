@@ -1,0 +1,2 @@
+class HorrorMoviesController < ApplicationController
+end

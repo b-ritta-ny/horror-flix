@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  poster: MyString
+  title: MyString
+  director: MyString
+  rating: 1
+  date_watched: 2021-10-16
+  user_id: 1
+  genre_id: 1
+
+two:
+  poster: MyString
+  title: MyString
+  director: MyString
+  rating: 1
+  date_watched: 2021-10-16
+  user_id: 1
+  genre_id: 1
