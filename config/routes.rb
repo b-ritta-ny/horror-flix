@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :horror_movie_genres
   namespace :api do
     namespace :v1 do
       resources :genres
