@@ -1,14 +1,12 @@
 class Api::V1::UsersController < ApplicationController
     before_action :find_user
 
-
 #GET /users
     def index
         @users = Users.all
         render json: @user
     end
 end
-
 
 private 
     def find_user
