@@ -6,15 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user1 = User.create(name: "Riley Flynn", username: "rileyflynn", password: "password")
-user2 = User.create(name: "Erin Greene", username: "eringreene", password: "password")
+user1 = User.create(name: "Riley Flynn", username: "rileyflynn", password_digest: "password")
+user2 = User.create(name: "Erin Greene", username: "eringreene", password_digest: "password")
 
-genre1 = Genre.create(type: "supernatural horror")
-genre2 = Genre.create(type: "mystery")
-genre3 = Genre.create(type: "post-apocalyptic")
-genre4 = Genre.create(type: "folktale")
-genre5 = Genre.create(type: "cult")
-genre6 = Genre.create(type: "summer festival")
+genre1 = Genre.create(name: "supernatural")
+genre2 = Genre.create(name: "mystery")
+genre3 = Genre.create(name: "post-apocalyptic")
+genre4 = Genre.create(name: "folktale")
+genre5 = Genre.create(name: "cult")
+genre6 = Genre.create(name: "summer festival")
 
 horror_movie1 = HorrorMovie.create(poster: "https://amc-theatres-res.cloudinary.com/v1594123072/amc-cdn/production/2/movies/44400/44369/Poster/p_800x1200_AMC_Oculus_07052020.jpg",
                 title: "Oculus", director: "Mike Flanagan", rating: 5, date_watched: 2021-10-17, user_id: user1.id)
