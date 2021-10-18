@@ -22,12 +22,12 @@ ActiveRecord::Schema.define(version: 2021_10_17_180637) do
   end
 
   create_table "horror_movie_genres", force: :cascade do |t|
-    t.bigint "horror_movies_id"
-    t.bigint "genres_id"
+    t.bigint "horror_movie_id"
+    t.bigint "genre_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["genres_id"], name: "index_horror_movie_genres_on_genres_id"
-    t.index ["horror_movies_id"], name: "index_horror_movie_genres_on_horror_movies_id"
+    t.index ["genre_id"], name: "index_horror_movie_genres_on_genre_id"
+    t.index ["horror_movie_id"], name: "index_horror_movie_genres_on_horror_movie_id"
   end
 
   create_table "horror_movies", force: :cascade do |t|
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2021_10_17_180637) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "horror_movie_genres", "genres", column: "genres_id"
-  add_foreign_key "horror_movie_genres", "horror_movies", column: "horror_movies_id"
+  add_foreign_key "horror_movie_genres", "genres"
+  add_foreign_key "horror_movie_genres", "horror_movies"
   add_foreign_key "horror_movies", "users"
 end
