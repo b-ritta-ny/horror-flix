@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_17_201650) do
+ActiveRecord::Schema.define(version: 2021_10_17_180637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,10 +22,12 @@ ActiveRecord::Schema.define(version: 2021_10_17_201650) do
   end
 
   create_table "horror_movie_genres", force: :cascade do |t|
+    t.bigint "horror_movies_id"
+    t.bigint "genres_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "genre_id"
-    t.integer "horror_movie_id"
+    t.index ["genres_id"], name: "index_horror_movie_genres_on_genres_id"
+    t.index ["horror_movies_id"], name: "index_horror_movie_genres_on_horror_movies_id"
   end
 
   create_table "horror_movies", force: :cascade do |t|
@@ -34,9 +36,10 @@ ActiveRecord::Schema.define(version: 2021_10_17_201650) do
     t.string "director"
     t.integer "rating"
     t.date "date_watched"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_horror_movies_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,4 +50,7 @@ ActiveRecord::Schema.define(version: 2021_10_17_201650) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "horror_movie_genres", "genres", column: "genres_id"
+  add_foreign_key "horror_movie_genres", "horror_movies", column: "horror_movies_id"
+  add_foreign_key "horror_movies", "users"
 end

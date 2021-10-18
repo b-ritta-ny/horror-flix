@@ -6,9 +6,8 @@ class CreateHorrorMovies < ActiveRecord::Migration[6.1]
       t.string :director
       t.integer :rating
       t.date :date_watched
-      t.integer :user_id
-      t.integer :genre_id
-
+      t.belongs_to :user, foreign_key: true
+     
       t.timestamps
     end
   end
