@@ -1,10 +1,10 @@
 class Api::V1::UsersController < ApplicationController
-    before_action :find_user
+    before_action :find_user, only: [:new, :create, :show, :destroy]
 
 #GET /users
     def index
-        @users = Users.all
-        render json: @user
+        @users = User.all
+        render json: @users
     end
 end
 
