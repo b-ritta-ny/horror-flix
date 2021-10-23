@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  post "api/v1/login", to: "session#create"
+  post "api/v1/login", to: "api/v1/sessions#create"
 
   resources :horror_movie_genres
   namespace :api do
