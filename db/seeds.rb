@@ -12,8 +12,9 @@ HorrorMovie.destroy_all
 HorrorMovieGenre.destroy_all
 
 #user
-user1 = User.create(name: "Riley Flynn", username: "rileyflynn", password_digest: "password")
-user2 = User.create(name: "Erin Greene", username: "eringreene", password_digest: "password")
+user1 = User.create(name: "Riley Flynn", username: "rileyflynn", password_digest: "testaftergemupdate")
+user2 = User.create(name: "Erin Greene", username: "eringreene", password_digest: "testaftergemupdate")
+user2 = User.create(name: "Paul Hill", username: "paulhill", password_digest: "imnotavampire")
 
 #genre
 genre1 = Genre.create(name: "supernatural")
