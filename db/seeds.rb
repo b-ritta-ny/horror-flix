@@ -12,9 +12,9 @@ HorrorMovie.destroy_all
 HorrorMovieGenre.destroy_all
 
 #user
-user1 = User.create(name: "Riley Flynn", username: "rileyflynn", password_digest: "testaftergemupdate")
-user2 = User.create(name: "Erin Greene", username: "eringreene", password_digest: "testaftergemupdate")
-user2 = User.create(name: "Paul Hill", username: "paulhill", password_digest: "imnotavampire")
+user1 = User.create(name: "Riley Flynn", username: "rileyflynn", password: "testaftergemupdate")
+user2 = User.create(name: "Erin Greene", username: "eringreene", password: "testaftergemupdate")
+user2 = User.create(name: "Paul Hill", username: "paulhill", password: "imnotavampire")
 
 #genre
 genre1 = Genre.create(name: "supernatural")
@@ -36,7 +36,7 @@ horror_movie4 = HorrorMovie.create(poster: "https://amc-theatres-res.cloudinary.
 
 #horror movie genres
 h1 = HorrorMovieGenre.create(horror_movie_id: horror_movie1.id, genre_id: genre1.id)
-h2 = HorrorMovieGenre.create(horror_movie_id: horror_movie1.id, genre_id: genre5.id)
+h2 = HorrorMovieGenre.create(horror_movie_id: horror_movie1.id, genre_id: genre3.id)
 h3 = HorrorMovieGenre.create(horror_movie_id: horror_movie1.id, genre_id: genre4.id)
-h4 = HorrorMovieGenre.create(horror_movie_id: horror_movie1.id, genre_id: genre6.id)
+h4 = HorrorMovieGenre.create(horror_movie_id: horror_movie1.id, genre_id: genre2.id)
 
