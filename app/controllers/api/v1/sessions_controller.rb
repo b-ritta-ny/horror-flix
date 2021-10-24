@@ -15,7 +15,7 @@ class Api::V1::SessionsController < ApplicationController
 
     def get_current_user
         if logged_in?
-            render json: @user
+            render json: current_user
         else
             render json: {
                 error: "Invalid Credentials"
