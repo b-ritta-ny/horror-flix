@@ -18,7 +18,7 @@ class Api::V1::SessionsController < ApplicationController
             render json: current_user
         else
             render json: {
-                error: "Invalid Credentials"
+                error: "No one logged in."
             }
         end
     end
