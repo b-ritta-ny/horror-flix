@@ -1,7 +1,9 @@
 class Api::V1::UsersController < ApplicationController
+    wrap_parameters :user, include: [:name, :username, :password]
     before_action :find_user, only: [:update, :show, :destroy]
 
 #GET /users
+
     def index
         @users = User.all
         render json: @users
@@ -11,7 +13,7 @@ class Api::V1::UsersController < ApplicationController
 
 #POST /users
     def create
-        binding.pry
+        byebug
         @user = User.new(user_params)
         if @user.save
             session[:user_id] = @user.id
@@ -30,5 +32,8 @@ private
     end
 
     def user_params
-        params.require(:user).permit(:name, :username, :password, :password_confirmation)
-    end    
+        params.require(:user).permit(:name, :username, :password)
+    end
+end  
+
+
