@@ -1,12 +1,13 @@
 class Api::V1::UsersController < ApplicationController
-    before_action :find_user, only: [:new, :create, :show, :destroy]
+    before_action :find_user, only: [:update, :show, :destroy]
 
 #GET /users
     def index
         @users = User.all
         render json: @users
     end
-end
+
+
 
 #POST /users
     def create
@@ -15,7 +16,6 @@ end
         if @user.save
             session[:user_id] = @user.id
             render json: UserSerializer.new(@user)
-           
         else
             resp = {
                 error: @user.errors.full_messages.to_sentence
