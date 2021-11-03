@@ -10,6 +10,7 @@ User.destroy_all
 Genre.destroy_all
 HorrorMovie.destroy_all
 HorrorMovieGenre.destroy_all
+Reviews.destroy_all
 
 #user
 user1 = User.create(name: "Riley Flynn", username: "rileyflynn", password: "testaftergemupdate")
