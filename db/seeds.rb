@@ -10,11 +10,11 @@ User.destroy_all
 Genre.destroy_all
 HorrorMovie.destroy_all
 HorrorMovieGenre.destroy_all
-Reviews.destroy_all
+Review.destroy_all
 
 #user
-user1 = User.create(name: "Riley Flynn", username: "rileyflynn", password: "testaftergemupdate")
-user2 = User.create(name: "Erin Greene", username: "eringreene", password: "testaftergemupdate")
+user1 = User.create(name: "Riley Flynn", username: "rileyflynn", password: "password")
+user2 = User.create(name: "Erin Greene", username: "eringreene", password: "password")
 user3 = User.create(name: "Paul Hill", username: "paulhill", password: "imnotavampire")
 
 #genre
@@ -42,11 +42,11 @@ h3 = HorrorMovieGenre.create(horror_movie_id: horror_movie1.id, genre_id: genre4
 h4 = HorrorMovieGenre.create(horror_movie_id: horror_movie1.id, genre_id: genre2.id)
 
 #reviews 
-r1 = Review.create(description: "Terrifying!", rating: "3" user_id: user3.id, horror_movie_id: horror_movie1.id)
-r2 = Review.create(description: "Scary and original", rating: "5" user_id: user2.id, horror_movie_id: horror_movie1.id)
-r3 = Review.create(description: "I was on the edge of my seat", rating: "4" user_id: user1.id, horror_movie_id: horror_movie1.id)
+r1 = Review.create(description: "Terrifying!", rating: 3, user_id: user3.id, horror_movie_id: horror_movie1.id)
+r2 = Review.create(description: "Scary and original", rating: 5, user_id: user2.id, horror_movie_id: horror_movie1.id)
+r3 = Review.create(description: "I was on the edge of my seat", rating: 4, user_id: user1.id, horror_movie_id: horror_movie1.id)
 
-r3 = Review.create(description: "I loved it!", rating: "5" user_id: user3.id, horror_movie_id: horror_movie2.id)
-r4 = Review.create(description: "I'd recommend it to everyone.", rating: "4" user_id: user2.id, horror_movie_id: horror_movie2.id)
-r6 = Review.create(description: "Super original", rating: "4" user_id: user1.id, horror_movie_id: horror_movie2.id)
+r3 = Review.create(description: "I loved it!", rating: 5, user_id: user3.id, horror_movie_id: horror_movie2.id)
+r4 = Review.create(description: "I'd recommend it to everyone.", rating: 4, user_id: user2.id, horror_movie_id: horror_movie2.id)
+r6 = Review.create(description: "Super original", rating: 4, user_id: user1.id, horror_movie_id: horror_movie2.id)
 

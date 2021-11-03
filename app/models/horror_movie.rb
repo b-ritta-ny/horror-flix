@@ -5,8 +5,8 @@ class HorrorMovie < ApplicationRecord
     has_many :reviews 
     has_many :users, through: :reviews 
 
-    validates :title, :director, :user
-
+    validates :title, :director, presence: true
 end
 
 
+ 
