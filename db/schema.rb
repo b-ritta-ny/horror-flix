@@ -10,47 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_17_180637) do
+ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "genres", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "horror_movie_genres", force: :cascade do |t|
-    t.bigint "horror_movie_id"
-    t.bigint "genre_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["genre_id"], name: "index_horror_movie_genres_on_genre_id"
-    t.index ["horror_movie_id"], name: "index_horror_movie_genres_on_horror_movie_id"
-  end
-
-  create_table "horror_movies", force: :cascade do |t|
-    t.string "poster"
-    t.string "title"
-    t.string "director"
-    t.integer "rating"
-    t.date "date_watched"
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_horror_movies_on_user_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "username"
-    t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  add_foreign_key "horror_movie_genres", "genres"
-  add_foreign_key "horror_movie_genres", "horror_movies"
-  add_foreign_key "horror_movies", "users"
 end

@@ -4,7 +4,6 @@ class CreateHorrorMovies < ActiveRecord::Migration[6.1]
       t.string :poster
       t.string :title
       t.string :director
-      t.integer :rating
       t.date :date_watched
       t.belongs_to :user, foreign_key: true
      
