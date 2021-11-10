@@ -1,6 +1,6 @@
 class HorrorMovieSerializer
   include JSONAPI::Serializer
-  attributes :poster, :title, :director, :rating, :date_watched
+  attributes :poster, :title, :director, :date_watched
 end
 
 
