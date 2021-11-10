@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :reviews, :only => [:create, :destroy]
+      resources :horror_movies, only: [:index]
       resources :users do
         resources :genres
-        resources :horror_movies
+        resources :horror_movies, only: [:create]
       end
     end
   end
