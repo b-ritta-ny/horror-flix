@@ -11,6 +11,9 @@ class Api::V1::ReviewsController < ApplicationController
         end
     end
 
+    def destroy
+        @review = Review.find(params[:id])
+
     private
 
     def review_params 
