@@ -10,12 +10,14 @@ class HorrorMovie < ApplicationRecord
     before_create :slugify
 
     def slugify
-        self.slug = title.parameterize
+        self.slug = self.title.parameterize
     end
 
     def avg_score
-        self.reviews.average(:rating).round(2).to_f
+        self.reviews.average(:rating).round(0).to_f
     end
+
+    #first portion returns 
 
 end
 
