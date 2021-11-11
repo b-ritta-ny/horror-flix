@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :reviews, :only => [:create, :destroy]
-      resources :horror_movies, only: [:index]
+      resources :horror_movies, param: :slug
       resources :users do
         resources :genres
         resources :horror_movies, only: [:create]
@@ -17,3 +17,7 @@ Rails.application.routes.draw do
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
+
+
+#param: overrides the :id identifier used to generate routes
+#for use in controller... Video.find_by(identifier: params[:identifier])
