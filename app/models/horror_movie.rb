@@ -14,6 +14,7 @@ class HorrorMovie < ApplicationRecord
     end
 
     def avg_score
+        return 0 unless self.reviews.count.positive?
         self.reviews.average(:rating).round(0).to_f
     end
 
@@ -21,5 +22,3 @@ class HorrorMovie < ApplicationRecord
 
 end
 
-
- 
