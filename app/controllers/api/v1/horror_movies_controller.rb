@@ -1,7 +1,6 @@
 class Api::V1::HorrorMoviesController < ApplicationController
 
-# GET /trips
-
+# GET /api/v1/horror-movies
     def index
         if logged_in?
             @horror_movies = current_user.horror_movies
@@ -16,8 +15,14 @@ class Api::V1::HorrorMoviesController < ApplicationController
         end
     end
 
-    #LATER: have to add a condition where if user isn't logged in, then display all the movies in the database with average score
-    #also need to add route that isn't nested under user module 
+    #DONE: add a condition where if user isn't logged in, then display all the movies in the database with average score
+    #also need to add route that isn't nested under user module.
+
+# GET /api/v1/horror-movies/:slug
+    def show
+        @horror_movie = HorrorMovie.find_by(slug: params[:slug])
+        render json: HorrorMovieSerializer.new(@horror_movie, options)
+    end
 
     private
 
