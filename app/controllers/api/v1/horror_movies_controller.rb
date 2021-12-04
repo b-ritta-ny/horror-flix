@@ -1,6 +1,6 @@
 class Api::V1::HorrorMoviesController < ApplicationController
 
-# GET /api/v1/horror-movies
+# GET /api/v1/horror_movies
     def index
         if logged_in?
             @horror_movies = current_user.horror_movies
@@ -18,11 +18,28 @@ class Api::V1::HorrorMoviesController < ApplicationController
     #DONE: add a condition where if user isn't logged in, then display all the movies in the database with average score
     #also need to add route that isn't nested under user module.
 
-# GET /api/v1/horror-movies/:slug
+# GET /api/v1/horror_movies/:slug
     def show
         @horror_movie = HorrorMovie.find_by(slug: params[:slug])
         render json: HorrorMovieSerializer.new(@horror_movie, options)
     end
+
+
+# POST /api/v1/horror_movies
+
+    def create
+    byebug
+    @horror_movie = HorrorMovie.create(movie_params)
+
+    if @horror_movie.save
+      render json:  HorrorMovieSerializer.new(@horror_movie), status: :created
+    else
+      error_resp = {
+        error: @horror_movie.errors.full_messages.to_sentence
+      }
+      render json: error_resp, status: :unprocessable_entity
+    end
+  end
 
     private
 
