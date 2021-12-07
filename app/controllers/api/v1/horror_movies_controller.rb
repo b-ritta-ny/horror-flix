@@ -28,18 +28,16 @@ class Api::V1::HorrorMoviesController < ApplicationController
 # POST /api/v1/horror_movies
 
     def create
-    byebug
-    @horror_movie = HorrorMovie.create(movie_params)
-
-    if @horror_movie.save
-      render json:  HorrorMovieSerializer.new(@horror_movie), status: :created
-    else
-      error_resp = {
-        error: @horror_movie.errors.full_messages.to_sentence
-      }
-      render json: error_resp, status: :unprocessable_entity
+        @horror_movie = HorrorMovie.create(horror_movie_params)
+        if @horror_movie.save
+            render json:  HorrorMovieSerializer.new(@horror_movie), status: :created
+        else
+            error_resp = {
+            error: @horror_movie.errors.full_messages.to_sentence
+            }
+            render json: error_resp, status: :unprocessable_entity
+        end
     end
-  end
 
     private
 
@@ -47,6 +45,12 @@ class Api::V1::HorrorMoviesController < ApplicationController
     def options
         @options ||= { include: %i[reviews] }
     end
+
+    def horror_movie_params
+        params.require(:horror_movie).permit(:title, :poster, :director, :year_released)
+    end
+
+
 
 
 end
