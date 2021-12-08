@@ -7,12 +7,17 @@ class Api::V1::ReviewsController < ApplicationController
         if @review.save
             render json: ReviewSerializer.new(@review)
         else
-            render json: { error: review.errors.messages }, status: 422
+            render json: { error: @review.errors.messages }, status: 422
         end
     end
 
     def destroy
         @review = Review.find(params[:id])
+
+        if review.destroy_all
+            head :no_content
+        else
+            render json: { error: @review.errors.messages }, status: 422
 
     private
 

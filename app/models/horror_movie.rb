@@ -2,8 +2,8 @@ class HorrorMovie < ApplicationRecord
     has_many :horror_movie_genres
     has_many :genres, through: :horror_movie_genres
 
-    has_many :reviews 
-    has_many :users, through: :reviews 
+    has_many :reviews
+    has_many :users, through: :reviews, dependent: :destroy
 
     validates :title, :director, presence: true
 

@@ -93,3 +93,4 @@ production:
   pool: 5
   username: railsuser
   password: <%= ENV['HORROR_PROD_PASSWORD'] %>
+ 
