@@ -2,18 +2,16 @@ class Api::V1::ReviewsController < ApplicationController
 
 #POST /api/v1/reviews
     def create
-
-    end
-
-    def index
-        @review = Review.new(review_params)
+        @review = airline.reviews.new(review_params)
 
         if @review.save
-            render json: ReviewSerializer.new(@review)
+            render json: ReviewSerializer.new(@review).serialized, status: :created
         else
             render json: { error: @review.errors.messages }, status: 422
         end
     end
+
+    
 
     def destroy
         @review = Review.find(params[:id])
