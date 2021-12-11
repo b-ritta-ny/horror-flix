@@ -1,17 +1,16 @@
 class Api::V1::ReviewsController < ApplicationController
 
-#POST /api/v1/reviews
+#POST /reviews
     def create
-        @review = airline.reviews.new(review_params)
-
+        @review = horror_movie.reviews.new(review_params)
+        
         if @review.save
+            byebug
             render json: ReviewSerializer.new(@review).serialized, status: :created
         else
             render json: { error: @review.errors.messages }, status: 422
         end
     end
-
-    
 
     def destroy
         @review = Review.find(params[:id])
@@ -20,11 +19,13 @@ class Api::V1::ReviewsController < ApplicationController
             head :no_content
         else
             render json: { error: @review.errors.messages }, status: 422
+        end
+    end
 
     private
 
     def horror_movie
-        @horror_movie ||= HorrorMovie.find(params[:horror_movie_id])
+        horror_movie ||= HorrorMovie.find(params[:horror_movie_id])
     end
 
     def review_params 
