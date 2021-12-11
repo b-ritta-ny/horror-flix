@@ -1,6 +1,6 @@
 class Review < ApplicationRecord
-    belongs_to :user
+    belongs_to :user, optional: true
     belongs_to :horror_movie
 
-    validates :description, :rating, presence: true
+    validates :description, :title, presence: true
 end
