@@ -1,6 +1,10 @@
 class Api::V1::ReviewsController < ApplicationController
 
-#POST /reviews
+#POST /api/v1/reviews
+    def create
+
+    end
+
     def index
         @review = Review.new(review_params)
 
@@ -20,6 +24,10 @@ class Api::V1::ReviewsController < ApplicationController
             render json: { error: @review.errors.messages }, status: 422
 
     private
+
+    def horror_movie
+        @horror_movie ||= HorrorMovie.find(params[:horror_movie_id])
+    end
 
     def review_params 
         params.require(:review).permit(:title, :description, :score, :horror_movie_id, :user_id)
