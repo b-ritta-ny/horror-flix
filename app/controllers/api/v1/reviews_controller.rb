@@ -29,6 +29,6 @@ class Api::V1::ReviewsController < ApplicationController
     end
 
     def review_params 
-        params.require(:review).permit(:title, :description, :score, :horror_movie_id, :user_id)
+        params.require(:review).permit(:title, :description, :horror_movie_id, :user_id, :rating)
     end
 end
