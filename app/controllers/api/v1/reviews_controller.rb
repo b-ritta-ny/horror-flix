@@ -3,10 +3,10 @@ class Api::V1::ReviewsController < ApplicationController
 #POST /reviews
     def create
         @review = horror_movie.reviews.new(review_params)
-        byebug
+    
         if @review.save
      
-            render json: ReviewSerializer.new(@review).serialized, status: :created
+            render json: ReviewSerializer.new(@review), status: :created
         else
             render json: { error: @review.errors.messages }, status: 422
         end
