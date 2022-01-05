@@ -119,6 +119,14 @@ GEM
     mini_portile2 (2.6.1)
     minitest (5.15.0)
     msgpack (1.4.2)
+    net-imap (0.2.2)
+      digest
+      net-protocol
+      strscan
+    net-pop (0.1.1)
+      digest
+      net-protocol
+      timeout
     net-protocol (0.1.2)
       io-wait
       timeout
@@ -152,6 +160,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     spring (4.0.0)
+    strscan (3.0.1)
     thor (1.1.0)
     timeout (0.2.0)
     tzinfo (2.0.4)
@@ -172,6 +181,8 @@ DEPENDENCIES
   byebug
   jsonapi-serializer
   listen (~> 3.3)
+  net-imap
+  net-pop
   net-smtp
   pg (~> 1.1)
   pry
