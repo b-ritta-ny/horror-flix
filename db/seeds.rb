@@ -42,11 +42,11 @@ h3 = HorrorMovieGenre.create(horror_movie_id: horror_movie1.id, genre_id: genre4
 h4 = HorrorMovieGenre.create(horror_movie_id: horror_movie1.id, genre_id: genre2.id)
 
 #reviews 
-r1 = Review.create(description: "Terrifying!", rating: 3, user_id: user3.id, horror_movie_id: horror_movie1.id)
-r2 = Review.create(description: "Scary and original", rating: 5, user_id: user2.id, horror_movie_id: horror_movie1.id)
-r3 = Review.create(description: "I was on the edge of my seat", rating: 4, user_id: user1.id, horror_movie_id: horror_movie1.id)
+r1 = Review.create(description: "Terrifying!", title: "Terrifying movie", rating: 3, horror_movie_id: horror_movie1.id)
+r2 = Review.create(description: "Scary and original", title: "Great movie", rating: 5, horror_movie_id: horror_movie1.id)
+r3 = Review.create(description: "I was on the edge of my seat", title: "Loved this movie!", rating: 4, horror_movie_id: horror_movie1.id)
 
-r3 = Review.create(description: "I loved it!", rating: 5, user_id: user3.id, horror_movie_id: horror_movie2.id)
-r4 = Review.create(description: "I'd recommend it to everyone.", rating: 4, user_id: user2.id, horror_movie_id: horror_movie2.id)
-r6 = Review.create(description: "Super original", rating: 4, user_id: user1.id, horror_movie_id: horror_movie2.id)
+r3 = Review.create(description: "I loved it!", title: "Loved this movie!", rating: 5, horror_movie_id: horror_movie2.id)
+r4 = Review.create(description: "I'd recommend it to everyone.", title: "great horror movie!", rating: 4, horror_movie_id: horror_movie2.id)
+r6 = Review.create(description: "Super original", title: "One for horror fans!", rating: 4, horror_movie_id: horror_movie2.id)
 
