@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'welcome#index'
+  root 'home#index'
 
   post "api/v1/login", to: "api/v1/sessions#create"
   delete "api/v1/logout", to: "api/v1/sessions#destroy"
