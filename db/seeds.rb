@@ -44,12 +44,12 @@ h3 = HorrorMovieGenre.create(horror_movie_id: horror_movie1.id, genre_id: genre4
 h4 = HorrorMovieGenre.create(horror_movie_id: horror_movie1.id, genre_id: genre2.id)
 
 #reviews 
-r1 = Review.create(description: "Terrifying!", title: "Terrifying movie", rating: 3, user_id: 3, horror_movie_id: 1)
-r2 = Review.create(description: "Scary and original", title: "Great movie", rating: 5, user_id: 2, horror_movie_id: 1)
-r3 = Review.create(description: "I was on the edge of my seat", title: "Loved this movie!", rating: 4, user_id: 1, horror_movie_id: 1)
+r1 = Review.create(description: "Terrifying!", name: "Jenn", title: "Terrifying movie", rating: 3, user_id: 3, horror_movie_id: 1)
+r2 = Review.create(description: "Scary and original", name: "Tim", title: "Great movie", rating: 5, user_id: 2, horror_movie_id: 1)
+r3 = Review.create(description: "I was on the edge of my seat", name: "Molly A.", title: "Loved this movie!", rating: 4, user_id: 1, horror_movie_id: 1)
 
-r3 = Review.create(description: "I loved it!", title: "Loved this movie!", rating: 5, user_id: 3, horror_movie_id: 2)
-r4 = Review.create(description: "I'd recommend it to everyone.", title: "great movie!", rating: 4, user_id: 2, horror_movie_id: 2)
-r6 = Review.create(description: "Super original", title: "great", rating: 4, user_id: 1, horror_movie_id: 2)
+r3 = Review.create(description: "I loved it!", name: "Quincy F.", title: "Loved this movie!", rating: 5, user_id: 3, horror_movie_id: 2)
+r4 = Review.create(description: "I'd recommend it to everyone.", name: "Corny H.",title: "great movie!", rating: 4, user_id: 2, horror_movie_id: 2)
+r6 = Review.create(description: "Super original", name: "Buffy Pan", title: "great", rating: 4, user_id: 1, horror_movie_id: 2)
 
-r7 = Review.create(description: "Super original plot and great execution", title: "Fantastic watch", rating: 4, user_id: 1, horror_movie_id: 5)
+r7 = Review.create(description: "Super original plot and great execution", name: "Thompson P.", title: "Fantastic watch", rating: 4, user_id: 1, horror_movie_id: 5)
