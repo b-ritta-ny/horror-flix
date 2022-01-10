@@ -2,6 +2,7 @@ class Api::V1::ReviewsController < ApplicationController
 
 #POST /reviews
     def create
+        byebug
         @review = horror_movie.reviews.new(review_params)
     
         if @review.save
