@@ -11,6 +11,7 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -67,3 +68,4 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 /public/uploads
+app/views/home/index.html
