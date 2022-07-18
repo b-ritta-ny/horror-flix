@@ -1,7 +1,7 @@
 import { addMovie } from './horrorMovies';
 import { resetDate } from './date';
 
-const endpoint = "https://horror-movies-backend.herokuapp.com/"
+const endpoint = "https://horror-flix-reviews.herokuapp.com/"
 const moviesPath = "api/v1/horror_movies"
 
 //synchronous actions 
