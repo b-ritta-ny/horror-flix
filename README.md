@@ -28,7 +28,7 @@ Each movie has its individual show page where users can read each review as well
 
 ## General dependencies.
 
-Node.js, npm, Rails, and PostgreSQL should be installed on your machine. Other project dependencies and versions can be found in the package.json file once you have cloned the project repository.
+Node.js, npm, Rails, and PostgreSQL should be installed on your machine. Other project dependencies and versions can be found in the package.json file once you have cloned the project repository
 
 ### Installing
 
@@ -42,7 +42,7 @@ Node.js, npm, Rails, and PostgreSQL should be installed on your machine. Other p
 
 ## Version History
 
-* 0.2 [TO COME]
+* 0.2 [TO COME] 
   Implement user profile pages
 
 
