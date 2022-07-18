@@ -1,6 +1,6 @@
 import { setReviews } from './review.js';
 
-const endpoint = "https://horror-flix-reviews.herokuapp.com/"
+const endpoint = "https://horror-movies-backend.herokuapp.com/"
 const version = "api/v1"
 
 //synchronous action creators

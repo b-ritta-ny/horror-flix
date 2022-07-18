@@ -1,6 +1,6 @@
 import { addReview } from "./review";
 
-const endpoint = "https://horror-flix-reviews.herokuapp.com/"
+const endpoint = "https://horror-movies-backend.herokuapp.com/"
 const reviewsPath = "api/v1/reviews"
 
 //synchronous actions

@@ -4,7 +4,7 @@ import { clearSignupForm } from './signupForm';
 import { openOrCloseModal } from './openOrCloseModal';
 import { showOrHideSignupModal } from './signupModal';
 
-const endpoint = "https://horror-flix-reviews.herokuapp.com/"
+const endpoint = "https://horror-movies-backend.herokuapp.com/"
 const loginPath = "api/v1/login"
 const signupPath = "api/v1/signup"
 const currentUserPath = "api/v1/get_current_user"

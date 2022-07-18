@@ -1,6 +1,6 @@
 //synchronous action creators
 
-const endpoint = "https://horror-flix-reviews.herokuapp.com/"
+const endpoint = "https://horror-movies-backend.herokuapp.com/"
 const moviesPath = "api/v1/horror_movies"
 
 export const setMovies = (movies) => {
