@@ -1,0 +1,29 @@
+.FormWrapper {
+    border: 1px solid;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* 1 - PARENT CONTAINER FLEX */
+.FormContainer {
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 5px;
+    padding:10px;
+}
+
+
+.FormContainer .transparent_button {
+    width: 250px;
+    margin-left: 20px;
+    height: 50px;
+
+}
+

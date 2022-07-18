@@ -1,0 +1,64 @@
+/* WRAPPER */
+.movie-wrapper {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+
+
+/* SECOND PARENT INSIDE MAIN FLEXBOX I -- header and button */
+.reviews-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.reviews-container .review-button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.reviews-container button{
+    height: 50px;
+    margin: 20px;
+}
+
+
+
+/* CHILD INSIDE REVIEWS CONTAINER */
+
+.reviews {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 24px 0 0 0;
+}
+
+
+
+
+
+
+/* SECOND PARENT INSIDE MAIN FLEXBOX II */
+.column-review {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-form {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10px;
+}
+
+#hide {
+    display: none;
+}

@@ -1,0 +1,31 @@
+.review_card {
+    flex: 0 1 30%;
+    border: 1px solid;
+    padding: 20px;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+    height: 400px;
+    width: 100%;
+}
+
+.rating-score {
+    display: flex;
+    flex-direction: row;
+}
+
+.review-title {
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    padding: 20px 0 0 0;
+}
+
+.name {
+    font-size: 12px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.description {
+    font-size: 15px;
+}

@@ -1,0 +1,119 @@
+body, html {
+    height: 100%;
+    max-width: 100%;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.content-wrap {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(238, 232, 222);
+    font-size: 12px;
+    line-height: 1.563;
+    color: #1e2525;
+    box-sizing: border-box;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input {
+    appearance: none;
+    display: block;
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid transparent;
+    width: 95%;
+    padding: 2px 8px;
+    font-size: 14px;
+    height: 32px;
+    color: #1e2525;
+    padding: 5px;
+}
+
+.logoff {
+    background-color: blueviolet;
+}
+
+.primary-button {
+    align-items: center;
+    justify-content: center;
+    background-color: #1e2525;
+    border: none;
+    width: 120px;
+    padding: 3px 8px;
+    margin: 20px;
+    font-size: 12px;
+    border-radius: 0;
+    height: 25px;
+    color: whitesmoke;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.transparent_button {
+    background-color: transparent;
+    border: 1px solid currentColor;
+    color: #1e2525;
+    text-decoration: none;
+    text-align: center;
+    margin: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px;
+    height: 20px;
+    width: 150px;
+}
+
+.float_right {
+    float: right;
+}
+
+.float_center {
+    float: center;
+}
+
+.title {
+    font-family: 'Montagu Slab', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+ul {
+    margin: 0;
+    margin-bottom: 0px;
+    padding: 0;
+    list-style: none;
+}
+
+h2 {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}

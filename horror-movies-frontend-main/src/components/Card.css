@@ -1,0 +1,28 @@
+.card-wrapper {
+    border: 1px solid lightgrey;
+    width: 250px;
+    text-align:center;
+}
+
+.movie-title {
+    padding: 10px 0 0px 0;
+    font-size:14px;
+}
+
+.poster img{
+    width: 150px;
+    border-radius: 25%;
+    margin: 5px;
+
+}
+
+
+.link {
+    height:50px;
+}
+
+
+.card:hover{
+    cursor: pointer;
+    border: 2px solid #DB2027;
+}
